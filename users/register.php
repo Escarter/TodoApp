@@ -1,3 +1,7 @@
+<?php session_start();
+if (isset($_SESSION['userinfo'])) {
+ 	header('location: ../index.php');
+ } ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +18,15 @@
 						<h3 class="text-center">Register</h3>
 					</div>
 				<div class="panel-body">
-				  <form class="form" action="" method="">
+				  <form class="form" action="registercheck.php" method="POST">
+					<?php 
+				  if(isset($_COOKIE['errorMsg'])){
+                      echo"<div class='alert alert-danger'>".$_COOKIE['errorMsg']."</div>";
+                   }
+                   if(isset($_COOKIE['successMsg'])){
+                      echo"<div class='alert alert-success'>".$_COOKIE['successMsg']."</div>";
+                   }
+				 ?>
 				  	<div class="row">
 				  		<div class="col-md-6">
 				  			<div class="form-group">
@@ -35,7 +47,7 @@
 				  		</div>
 				  		<div class="col-md-6">
 				  			<div class="form-group">
-							  <input type="username" class="form-control" placeholder="Username" name="username" >
+							  <input type="text" class="form-control" placeholder="Username" name="username" >
 						  </div>
 				  		</div>
 				  	</div>	
@@ -75,8 +87,8 @@
 			
 				<ul class="list-inline text-center">
 					<li><a href="../index.php">Home</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="../contactpage.php">Contact</a></li>
+					<li><a href="../About.php">About</a></li>
 				</ul>
 			</div>
 			

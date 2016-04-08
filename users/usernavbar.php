@@ -14,17 +14,18 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="users.php">Home</a></li>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="users.php">My tasks</a></li>
         <li><a href="createtask.php">Create Task</a></li>
-        <li><a href="#">View uncompleted</a></li>
+        <li><a href="completed.php">View completed</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Username<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['userinfo']['username']; ?><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Setting</a></li>
            <li role="separator" class="divider"></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="../logout.php">Logout</a></li>
           </ul>
         </li>
       </ul>

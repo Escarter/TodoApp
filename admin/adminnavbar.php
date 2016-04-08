@@ -1,3 +1,4 @@
+<nav class="navbar navbar-inverse">
 <!--<nav class="navbar navbar-inverse">-->
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -17,9 +18,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Admin<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Setting</a></li>
+            <li><a href="category.php">Setting</a></li>
            <li role="separator" class="divider"></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="../logout.php">Logout</a></li>
           </ul>
         </li>
       </ul>

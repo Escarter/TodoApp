@@ -1,44 +1,16 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
 	<head lang="en">
 		<meta charset="utf-8">
 		<?php include("resources.php"); ?>
 	<body>
-			<nav class="navbar navbar-inverse">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.php">TODOApp</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home </a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="login.php"> Login</a></li>
-      <li><a href="users/register.php"> Register</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+			<?php include('mainnav.php'); ?>
 			<div class="jumbotron">
 				<div class="container">
 					<div class="text-center">
 						<h1 class="logo" >TDApp</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat.</p>
+						<p>Our web based task management platform. For busy people to manage their agenda effectively every where securely and efficiently.</p>
 					</div>
 				</div>
 			</div>
@@ -49,10 +21,7 @@
 					<div class="text-center">
 						<h4>How it works?</h4>
 						 <h1><span class="glyphicon glyphicon-king"></span></h1>
-						 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						 consequat.</p>
+						 <p>First you need to register then sign in to create and manage your tasks.</p>
 					</div>
 				</div>
 			</div>
@@ -61,10 +30,7 @@
 				<div class="text-center">
 						<h4>What it does</h4>
 						 <h1><span class="glyphicon glyphicon-heart"></span></h1>
-						 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						 consequat.</p>
+						 <p>Manage your every day tasks with a lot of simplicity and flexibility.</p>
 					</div>
 					
 				</div>
@@ -74,10 +40,7 @@
 				<div class="text-center">
 						<h4>How it does it</h4>
 						 <h1><span class="glyphicon glyphicon-cog"></span></h1>
-						 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						 consequat.</p>
+						 <p>It provides you with a list of categories which simplifies the way you create and manage your task. It is secured and free...</p>
 					</div>
 				</div>
 			</div>
@@ -92,22 +55,23 @@
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<a href="" class="btn btn-default">Fork us on GitHub</a>
 		</div>
+		<div class="pull-right">
+			 <div class="fb-like" data-href="https://www.facebook.com/TodoApp-886206121506845/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+		</div>
+		<div class="clearfix"></div>
 	</div>	
 	<div class="container-fluid footer">
 		<div class="text-center">
-		<a href="#" class="btn btn-sm btn-info">twitter</a>
-		 <a href="#" class="btn btn-sm btn-primary">Facebook</a>
-		 <a href="#" class="btn btn-sm btn-danger">google +</a>
+		<a href="https://twitter.com/TodoApp2016" target='_blank' class="btn btn-sm btn-info">twitter</a>
+		 <a href="https://www.facebook.com/TodoApp-886206121506845" target='_blank' class="btn btn-sm btn-primary">Facebook</a>
+		 <a href="https://plus.google.com/u/0/100911236772433290211" target='_blank' class="btn btn-sm btn-danger">google +</a>
 		 <br />
 		 <br />
-		 <p>Designed with alot of <span class="glyphicon glyphicon-heart text-danger"></span> and <span class="glyphicon glyphicon-glass text-default"></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		 tempor incididunt ut labore <a href="">@divine</a> et dolore magna aliqua. Ut enim ad minim veniam,
-		 quis nostrud exercitation <a href="">@peter</a> ullamco laboris nisi ut aliquip ex ea commodo
-		 consequat. Duis aute irure dolor in reprehenderit in voluptate <a href="">@brieno</a></p>
+		 <p>Designed with alot of <span class="glyphicon glyphicon-heart text-danger"></span> and <span class="glyphicon glyphicon-glass text-default"></span> by <a href="">@divine</a> as the joggler  <a href="">@peter</a> the weed master <a href=""> @tazoh</a> the doobed brained <a href="">@pride</a> The lost mind <a href="">@Tina</a> The master and <a href="">@brieno</a>The master mind.</p>
 			<ul class="list-inline">
 				<li><a href="index.php">Home</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="">Contact</a></li>
+				<li><a href="About.php">About</a></li>
+				<li><a href="contactpage.php">Contact</a></li>
 			</ul>
 		</div>
 	

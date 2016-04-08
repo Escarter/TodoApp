@@ -1,3 +1,8 @@
+<?php session_start(); 
+ if (!isset($_SESSION['userinfo'])) {
+ 	header('location: ../login.php');
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +32,7 @@
 				    			<h3 class="text-center">Update your Profile</h3>
 				    		</div>
 				    		<div class="panel-body">
-				    			<form class="form" action="" method="">
+				    			<form class="form" action="" method="POST">
 							  	<div class="row">
 							  		<div class="col-md-6">
 							  			<div class="form-group">
@@ -48,7 +53,7 @@
 							  		</div>
 							  		<div class="col-md-6">
 							  			<div class="form-group">
-										  <input type="username" class="form-control" placeholder="Username" name="username" >
+										  <input type="text" class="form-control" placeholder="Username" name="username" >
 									  </div>
 							  		</div>
 							  	</div>	
@@ -107,13 +112,11 @@
 												</div>   		
 										  	</div>
 				    				</form>
-				    			</div>
 				    	</div>
 				    </div>
 				  </div>
 			 </div>
 		</div>
-	</div>
 <?php include("userfooter.php"); ?>	
 </body>
 </html>
